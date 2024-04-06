@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B51C3CE3-3311-4C5C-A6D5-3CD92A5C1F45}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>zhostcmd01</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Kernel\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Kernel\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Kernel\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Kernel\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;_USRDLL;ZHOSTCMD01_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Kernel\z-adman-01;$(SolutionDir)Kernel\z-encryption-01;$(SolutionDir)Kernel\z-dbconnect-01;$(SolutionDir)Kernel\z-ipcclient-01;$(SolutionDir)Kernel\z-setman-01;$(SolutionDir)Kernel\z-command-01;$(SolutionDir)Kernel\z-hubcmd-01;$(SolutionDir)Kernel\z-screenbuild-01;$(SolutionDir)Kernel\z-validateresponse-01;$(SolutionDir)Kernel\z-content-01;$(SolutionDir)Kernel\z-systembase-01;$(SolutionDir)Kernel\z-synchronize-01;$(SolutionDir)Kernel\z-serialize-01;$(SolutionDir)Kernel\z-writelog-01;$(SolutionDir)Kernel\z-sms-01;$(SolutionDir)Kernel\z-email-01;$(SolutionDir)Kernel\z-email-01\SMTP;$(SolutionDir)Kernel\z-email-01\SMTP\openssl-1.0.1s\inc32;$(SolutionDir)Kernel\z-licenseman-01;$(SolutionDir)Kernel\z-scheduler-01;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-systembase-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-content-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-validateresponse-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-setman-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-licenseman-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-synchronize-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-email-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-sms-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-command-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-hubcmd-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-ipcclient-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-serialize-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-scheduler-01.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;_DEBUG;_WINDOWS;_USRDLL;ZHOSTCMD01_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Kernel\z-adman-01;$(SolutionDir)Kernel\z-encryption-01;$(SolutionDir)Kernel\z-dbconnect-01;$(SolutionDir)Kernel\z-ipcclient-01;$(SolutionDir)Kernel\z-setman-01;$(SolutionDir)Kernel\z-command-01;$(SolutionDir)Kernel\z-hubcmd-01;$(SolutionDir)Kernel\z-screenbuild-01;$(SolutionDir)Kernel\z-validateresponse-01;$(SolutionDir)Kernel\z-content-01;$(SolutionDir)Kernel\z-systembase-01;$(SolutionDir)Kernel\z-synchronize-01;$(SolutionDir)Kernel\z-serialize-01;$(SolutionDir)Kernel\z-writelog-01;$(SolutionDir)Kernel\z-sms-01;$(SolutionDir)Kernel\z-email-01;$(SolutionDir)Kernel\z-email-01\SMTP;$(SolutionDir)Kernel\z-email-01\SMTP\openssl-1.0.1s\inc64;$(SolutionDir)Kernel\z-licenseman-01;$(SolutionDir)Kernel\z-scheduler-01;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-systembase-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-content-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-validateresponse-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-setman-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-licenseman-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-synchronize-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-email-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-sms-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-command-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-hubcmd-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-ipcclient-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-serialize-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-scheduler-01.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;ZHOSTCMD01_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Kernel\z-adman-01;$(SolutionDir)Kernel\z-encryption-01;$(SolutionDir)Kernel\z-dbconnect-01;$(SolutionDir)Kernel\z-ipcclient-01;$(SolutionDir)Kernel\z-setman-01;$(SolutionDir)Kernel\z-command-01;$(SolutionDir)Kernel\z-hubcmd-01;$(SolutionDir)Kernel\z-screenbuild-01;$(SolutionDir)Kernel\z-validateresponse-01;$(SolutionDir)Kernel\z-content-01;$(SolutionDir)Kernel\z-systembase-01;$(SolutionDir)Kernel\z-synchronize-01;$(SolutionDir)Kernel\z-serialize-01;$(SolutionDir)Kernel\z-writelog-01;$(SolutionDir)Kernel\z-sms-01;$(SolutionDir)Kernel\z-email-01;$(SolutionDir)Kernel\z-email-01\SMTP;$(SolutionDir)Kernel\z-email-01\SMTP\openssl-1.0.1s\inc32;$(SolutionDir)Kernel\z-licenseman-01;$(SolutionDir)Kernel\z-scheduler-01;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-systembase-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-content-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-validateresponse-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-setman-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-licenseman-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-synchronize-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-email-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-sms-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-command-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-hubcmd-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-ipcclient-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-serialize-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-scheduler-01.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;_USRDLL;ZHOSTCMD01_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)Kernel\z-adman-01;$(SolutionDir)Kernel\z-encryption-01;$(SolutionDir)Kernel\z-dbconnect-01;$(SolutionDir)Kernel\z-ipcclient-01;$(SolutionDir)Kernel\z-setman-01;$(SolutionDir)Kernel\z-command-01;$(SolutionDir)Kernel\z-hubcmd-01;$(SolutionDir)Kernel\z-screenbuild-01;$(SolutionDir)Kernel\z-validateresponse-01;$(SolutionDir)Kernel\z-content-01;$(SolutionDir)Kernel\z-systembase-01;$(SolutionDir)Kernel\z-synchronize-01;$(SolutionDir)Kernel\z-serialize-01;$(SolutionDir)Kernel\z-writelog-01;$(SolutionDir)Kernel\z-sms-01;$(SolutionDir)Kernel\z-email-01;$(SolutionDir)Kernel\z-email-01\SMTP;$(SolutionDir)Kernel\z-email-01\SMTP\openssl-1.0.1s\inc64;$(SolutionDir)Kernel\z-licenseman-01;$(SolutionDir)Kernel\z-scheduler-01;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-systembase-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-content-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-validateresponse-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-setman-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-licenseman-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-synchronize-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-email-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-sms-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-command-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-hubcmd-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-ipcclient-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-serialize-01.lib;$(SolutionDir)Kernel\$(Platform)\$(Configuration)\z-scheduler-01.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CheckAccessCommand.h" />
+    <ClInclude Include="CheckLicenseCommand.h" />
+    <ClInclude Include="CheckProgramsCommand.h" />
+    <ClInclude Include="CheckScheduleCommand.h" />
+    <ClInclude Include="CheckSignInDateCommand.h" />
+    <ClInclude Include="GetAuthSystemIDCommand.h" />
+    <ClInclude Include="GetAuthSysUserInfoCommand.h" />
+    <ClInclude Include="GetContentCommand.h" />
+    <ClInclude Include="GetDBAccessCommand.h" />
+    <ClInclude Include="GetHubServerListCommand.h" />
+    <ClInclude Include="GetUserDescriptorCommand.h" />
+    <ClInclude Include="GetUserListCommand.h" />
+    <ClInclude Include="HostCommandManager.h" />
+    <ClInclude Include="ResetUserPwdCommand.h" />
+    <ClInclude Include="SaveNotificationHistoryCommand.h" />
+    <ClInclude Include="SetUserSignInDateCommand.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ValidateAnswersCommand.h" />
+    <ClInclude Include="ValidateParamsCommand.h" />
+    <ClInclude Include="ValidateUserAccountCommand.h" />
+    <ClInclude Include="ValidateUserCustomPasswordCommand.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CheckAccessCommand.cpp" />
+    <ClCompile Include="CheckLicenseCommand.cpp" />
+    <ClCompile Include="CheckProgramsCommand.cpp" />
+    <ClCompile Include="CheckScheduleCommand.cpp" />
+    <ClCompile Include="CheckSignInDateCommand.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GetAuthSystemIDCommand.cpp" />
+    <ClCompile Include="GetAuthSysUserInfoCommand.cpp" />
+    <ClCompile Include="GetContentCommand.cpp" />
+    <ClCompile Include="GetDBAccessCommand.cpp" />
+    <ClCompile Include="GetHubServerListCommand.cpp" />
+    <ClCompile Include="GetUserDescriptorCommand.cpp" />
+    <ClCompile Include="GetUserListCommand.cpp" />
+    <ClCompile Include="HostCommandManager.cpp" />
+    <ClCompile Include="ResetUserPwdCommand.cpp" />
+    <ClCompile Include="SaveNotificationHistoryCommand.cpp" />
+    <ClCompile Include="SetUserSignInDateCommand.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ValidateAnswersCommand.cpp" />
+    <ClCompile Include="ValidateParamsCommand.cpp" />
+    <ClCompile Include="ValidateUserAccountCommand.cpp" />
+    <ClCompile Include="ValidateUserCustomPasswordCommand.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\SignInWin\Database]
+"DSN"= "SignInWinDB"
+"USR"= "siw"
+"PWD"= "SignInWinAdmin"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\SignInWin\IPC]
+"ServerPort"= dword:16
+"ServerIP"="192.168.2.10"
